@@ -68,4 +68,12 @@ int main()
     stack stact;
     int choice = 0;
     int value;
-   
+    while (choice != 5)
+    {
+        cout << "1. Push\n";
+        cout << "2.pop\n";
+        cout << "3. peek\n";
+        cout << "4.exit\n";
+        cout << "enter your choice :";
+        cin >> choice;
+        
