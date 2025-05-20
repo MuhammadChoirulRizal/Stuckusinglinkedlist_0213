@@ -14,7 +14,7 @@ public:
 class stack
 {
 private:
-    node*top;
+    node *top;
 
 public:
     stack()
@@ -22,46 +22,45 @@ public:
         top = NULL;
     }
 
-int push(int value)
-{
-    node *newNode = new node();
-    newNode->data = value;
-    newNode->next = top;
-    top = newNode;
-    cout << "push value:" << value << endl;
-    return value;
-}
-void pop()
-{
-    if (isEmpty())
+    int push(int value)
     {
-        cout << "stack is empty" << endl;
+        node *newNode = new node();
+        newNode->data = value;
+        newNode->next = top;
+        top = newNode;
+        cout << "push value:" << value << endl;
+        return value;
     }
-    cout << "popeped value : " << top->data << endl;
-    top = top->next;
-}
-void peek()
-{
-    if (top == NULL)
+    void pop()
     {
-        cout << "List empty" << endl;
-    }
-    else
-    {
-        node *current = top;
-        while (current != NULL)
+        if (isEmpty())
         {
-            cout << current->data << " " << endl;
-            current = current->next;
+            cout << "stack is empty" << endl;
         }
-        cout << endl;
+        cout << "popeped value : " << top->data << endl;
+        top = top->next;
     }
-}
+    void peek()
+    {
+        if (top == NULL)
+        {
+            cout << "List empty" << endl;
+        }
+        else
+        {
+            node *current = top;
+            while (current != NULL)
+            {
+                cout << current->data << " " << endl;
+                current = current->next;
+            }
+            cout << endl;
+        }
+    }
     bool isEmpty()
     {
         return top == NULL;
     }
-
 };
 int main()
 {
@@ -83,4 +82,13 @@ int main()
             cin >> value;
             stact.push(value);
             break;
-       
+        case 2:
+            if (!stact.isEmpty())
+            {
+                stact.pop();
+            }
+            else
+            {
+                cout << "stact is empty.cannot pop" << endl;
+            }
+            break;
