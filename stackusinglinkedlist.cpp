@@ -16,5 +16,7 @@ class stack
 {
     private :
     node * top;
-    
+    public :
+    stack()
+   
 };
