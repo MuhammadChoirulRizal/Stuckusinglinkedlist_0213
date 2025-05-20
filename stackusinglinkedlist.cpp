@@ -22,3 +22,7 @@ class stack
         top = NULL;
     }
 };
+int push (int value){
+    node *newNode= new node();
+    newNode ->data = value;
+    
