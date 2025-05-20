@@ -18,5 +18,7 @@ class stack
     node * top;
     public :
     stack()
-   
+    {
+        top = NULL;
+    }
 };
